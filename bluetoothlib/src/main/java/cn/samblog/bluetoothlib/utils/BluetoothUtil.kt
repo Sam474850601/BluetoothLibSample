@@ -4,7 +4,7 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 
 /**
- * Created by Administrator on 2017/8/23.
+ * 蓝牙工具类
  */
 class BluetoothUtil
 {

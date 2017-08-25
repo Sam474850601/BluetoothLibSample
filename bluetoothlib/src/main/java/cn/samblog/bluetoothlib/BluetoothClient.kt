@@ -85,7 +85,18 @@ class BluetoothClient : IBluetoothClient
     }
 
     override fun connect(device: BluetoothDevice): BluetoothSocket {
+        synchronized(openBloothLock)
+        {
+            var adapter = BluetoothAdapter.getDefaultAdapter()
+            if(!adapter.isEnabled)
+            {
+                adapter.enable()
+                openBloothLock.wait()
+            }
+            
 
+
+        }
         return null!!
     }
 
